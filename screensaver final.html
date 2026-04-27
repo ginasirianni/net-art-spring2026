@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cheetah Print Screensaver</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.screen {
+  position: relative;
+  width: 95vw;
+  height: 95vh;
+  overflow: hidden;
+  border: 6px solid #1a1a1a;
+  background: linear-gradient(to bottom, #2a1d14, #120d09);
+  cursor: pointer;
+  transition: background 1s ease;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  color: #ffd6ec;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: opacity 0.8s ease;
+}
+
+.screen:hover .message {
+  opacity: 0;
+}
+
+.screen:hover {
+  background: linear-gradient(to bottom, #3b1c35, #1b0f14);
+}
+
+.spot-group {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  animation-play-state: paused;
+  border-radius: 30px;
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.15);
+}
+
+.screen:hover .spot-group {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.screen:active .spot-group {
+  animation-duration: 3s;
+}
+
+.spot {
+  position: absolute;
+  background: #111;
+  border-radius: 50% 40% 55% 45%;
+  opacity: 0.95;
+}
+
+.spot1 { width: 35px; height: 28px; top: 15px; left: 20px; transform: rotate(20deg); }
+.spot2 { width: 28px; height: 22px; top: 60px; left: 80px; transform: rotate(-15deg); }
+.spot3 { width: 32px; height: 26px; top: 100px; left: 35px; transform: rotate(10deg); }
+.spot4 { width: 24px; height: 20px; top: 35px; left: 120px; transform: rotate(30deg); }
+.spot5 { width: 30px; height: 24px; top: 115px; left: 110px; transform: rotate(-20deg); }
+.spot6 { width: 18px; height: 15px; top: 75px; left: 140px; transform: rotate(10deg); }
+.spot7 { width: 20px; height: 16px; top: 140px; left: 75px; transform: rotate(-10deg); }
+
+.brown { background: #c98b47; }
+.pink { background: #ff7eb9; }
+.purple { background: #a06cd5; }
+
+.g1 { top: 8%; left: 6%; animation: float1 9s linear infinite paused; }
+.g2 { top: 18%; right: 10%; animation: float2 11s linear infinite paused; }
+.g3 { bottom: 10%; left: 12%; animation: float3 10s linear infinite paused; }
+.g4 { bottom: 14%; right: 14%; animation: float4 12s linear infinite paused; }
+.g5 { top: 38%; left: 40%; animation: float5 8s linear infinite paused; }
+.g6 { top: 58%; right: 30%; animation: float6 10s linear infinite paused; }
+
+@keyframes float1 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(250px,120px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-220px,160px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes float3 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(260px,-140px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes float4 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-240px,-150px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes float5 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-20px,-170px); }
+  100% { transform: translate(0,0); }
+}
+
+@keyframes float6 {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-220px,-30px); }
+  100% { transform: translate(0,0); }
+}
+</style>
+</head>
+
+<body>
+<div class="screen">
+  <div class="message">Hover to Start Cheetah Print Screensaver</div>
+
+  <div class="spot-group brown g1">
+    <div class="spot spot1"></div>
+    <div class="spot spot2"></div>
+    <div class="spot spot3"></div>
+    <div class="spot spot4"></div>
+    <div class="spot spot5"></div>
+    <div class="spot spot6"></div>
+    <div class="spot spot7"></div>
+  </div>
+
+  <div class="spot-group pink g2">
+    <div class="spot spot1"></div>
+    <div class="spot spot2"></div>
+    <div class="spot spot3"></div>
+    <div class="spot spot4"></div>
+    <div class="spot spot5"></div>
+    <div class="spot spot6"></div>
+    <div class="spot spot7"></div>
+  </div>
+
+  <div class="spot-group purple g3">
+    <div class="spot spot1"></div>
+    <div class="spot spot2"></div>
+    <div class="spot spot3"></div>
+    <div class="spot spot4"></div>
+    <div class="spot spot5"></div>
+    <div class="spot spot6"></div>
+    <div class="spot spot7"></div>
+  </div>
+
+  <div class="spot-group brown g4">
+    <div class="spot spot1"></div>
+    <div class="spot spot2"></div>
+    <div class="spot spot3"></div>
+    <div class="spot spot4"></div>
+    <div class="spot spot5"></div>
+    <div class="spot spot6"></div>
+    <div class="spot spot7"></div>
+  </div>
+
+  <div class="spot-group pink g5">
+    <div class="spot spot1"></div>
+    <div class="spot spot2"></div>
+    <div class="spot spot3"></div>
+    <div class="spot spot4"></div>
+    <div class="spot spot5"></div>
+    <div class="spot spot6"></div>
+    <div class="spot spot7"></div>
+  </div>
+
+  <div class="spot-group purple g6">
+    <div class="spot spot1"></div>
+    <div class="spot spot2"></div>
+    <div class="spot spot3"></div>
+    <div class="spot spot4"></div>
+    <div class="spot spot5"></div>
+    <div class="spot spot6"></div>
+    <div class="spot spot7"></div>
+  </div>
+
+</div>
+</body>
+</html>
