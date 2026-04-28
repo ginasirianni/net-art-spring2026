@@ -8,6 +8,7 @@ body {
   height: 100vh;
 }
 
+/* grid layout */
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -34,12 +35,13 @@ body {
   background: #c98b47;
 }
 
-/* cheetah style square */
+/* cheetah pattern squares */
 .cheetah {
   background: #c98b47;
   position: relative;
 }
 
+/* cheetah spots */
 .cheetah::before,
 .cheetah::after {
   content: "";
@@ -62,7 +64,7 @@ body {
   right: 20%;
 }
 
-/* extra shapes for variation */
+/* variations to make quilt look more interesting */
 .square:nth-child(3n) {
   border-radius: 50%;
 }
