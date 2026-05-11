@@ -6,13 +6,46 @@
 
   <title>Transformation</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:black;
+      overflow:hidden;
+    }
+
+    .box{
+      width:200px;
+      height:200px;
+      background:hotpink;
+
+      transition:all 1s ease;
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <div class="box"></div>
+  <div class="box" id="box"></div>
 
-  <script src="js/script.js"></script>
+  <script>
+
+    const box = document.getElementById("box");
+
+    box.addEventListener("click", function(){
+
+      box.style.background = "cyan";
+      box.style.borderRadius = "50%";
+      box.style.transform = "rotate(360deg) scale(1.5)";
+
+    });
+
+  </script>
+
 </body>
 </html>
