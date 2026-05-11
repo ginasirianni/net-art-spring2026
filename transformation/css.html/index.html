@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformation Project</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1e1a17;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      transition: 1s;
+    }
+
+    .box {
+      text-align: center;
+      padding: 50px;
+      border: 4px solid white;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      transition: 1s;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .transformed {
+      background: linear-gradient(to right, hotpink, purple, orange);
+    }
+
+    .transformed .box {
+      background: rgba(255,255,255,0.2);
+      transform: scale(1.1) rotate(3deg);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1 id="title">Quiet Mode</h1>
+
+    <p id="text">
+      Click the button to transform the page.
+    </p>
+
+    <button onclick="changePage()">
+      Transform
+    </button>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
